@@ -4,8 +4,7 @@ class RegistrationsController < ApplicationController
       email: params['user']['email'],
       password: params['user']['password'],
       password_confirmation: params['user']['password_confirmation'],
-      username: params['user']['username'],
-      team_name: params['user']['team_name']
+      username: params['user']['username']
     )
     if user
       session[:user_id] = user.id
