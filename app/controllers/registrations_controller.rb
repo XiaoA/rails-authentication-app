@@ -13,7 +13,7 @@ class RegistrationsController < ApplicationController
                user: user
              }
     else
-      render json: { status: 500 }
+      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
   end
 end

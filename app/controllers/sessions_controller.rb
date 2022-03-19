@@ -14,7 +14,10 @@ class SessionsController < ApplicationController
                user: user
              }
     else
-      render json: {status: 401}
+      render json: {
+               status: 401,
+               error: "There was a problem with your login. Please make sure your email and password are correct."
+             }
     end
   end
 
